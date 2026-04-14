@@ -17,7 +17,7 @@ In high-traffic systems, querying a database for a non-existent key (a "404 Not 
 
 ---
 
-## ⚡ The Solution: Bare-Metal Performance
+##  The Solution: Bare-Metal Performance
 
 PyFastBloom solves these problems by providing an in-memory, probabilistic data structure that sits in RAM and instantly filters out non-existent keys before they ever hit the database.
 
