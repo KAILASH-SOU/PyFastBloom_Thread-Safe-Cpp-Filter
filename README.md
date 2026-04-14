@@ -1,4 +1,4 @@
-# PyFastBloom: Hyper-Efficient Thread-Safe C++ Bloom Filter 🚀
+# PyFastBloom: Hyper-Efficient Thread-Safe C++ Bloom Filter 
 
 [![Language](https://img.shields.io/badge/language-C%2B%2B%20%2F%20Python-blue.svg)](https://isocpp.org/)
 [![Performance](https://img.shields.io/badge/performance-highly--concurrent-orange.svg)](https://pybind11.readthedocs.io/)
@@ -8,7 +8,7 @@
 
 ---
 
-## 🛡️ The Problem: The "Missing Key" Database Penalty
+##  The Problem: The "Missing Key" Database Penalty
 
 In high-traffic systems, querying a database for a non-existent key (a "404 Not Found" case) is surprisingly expensive. 
 1. **Disk I/O Bottleneck**: Databases often store indexes on disk. A request for a missing key forces the database to scan indexes/files, wasting valuable I/O cycles.
@@ -35,7 +35,7 @@ PyFastBloom solves these problems by providing an in-memory, probabilistic data 
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```mermaid
 graph TD
@@ -63,7 +63,7 @@ graph TD
 
 ---
 
-## 🚀 Installation & Usage
+##  Installation & Usage
 
 ### Build from Source
 Ensure you have a C++17 compatible compiler and `pybind11` installed.
@@ -98,13 +98,13 @@ if bf.contains("unknown_user"):
     pass
 else:
     # Guaranteed that the user does NOT exist!
-    # No database query needed. 🚀
+    # No database query needed. 
     print("Skipping DB - User definitely not found.")
 ```
 
 ---
 
-## 📊 Technical Performance
+## Technical Performance
 
 | Feature | PyFastBloom (C++) | Pure Python Implementation |
 |---------|-------------------|---------------------------|
@@ -115,7 +115,7 @@ else:
 
 ---
 
-## ⚠️ Limitations & Considerations
+##  Limitations & Considerations
 
 - **Probabilistic**: Can return False Positives (says "Exists" when it doesn't). It NEVER returns False Negatives (says "Doesn't exist" when it does).
 - **Fixed Size**: The size `m` and number of hashes `k` must be determined at initialization based on your expected capacity and desired error rate.
@@ -123,6 +123,4 @@ else:
 
 ---
 
-## 🛠️ Developed By
 
-**Kailash Sou** - Passionate about High-Performance Systems & Native Python Extensions.
