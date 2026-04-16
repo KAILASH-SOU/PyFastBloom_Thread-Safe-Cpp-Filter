@@ -4,7 +4,7 @@
 [![Performance](https://img.shields.io/badge/performance-highly--concurrent-orange.svg)](https://pybind11.readthedocs.io/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**PyFastBloom** is a high-performance, memory-optimized, thread-safe Bloom Filter implemented as a native C++ extension for Python. It is designed to handle millions of concurrent requests with microsecond latency, specifically targeting large-scale backend systems like those at Google or Rubrik.
+**PyFastBloom** is a high-performance, memory-optimized, thread-safe Bloom Filter implemented as a native C++ extension for Python. It is designed to handle millions of concurrent requests with microsecond latency.
 
 ---
 
