@@ -27,3 +27,10 @@ wheels/
 .vscode/
 .idea/
 .DS_Store
+
+# Environments
+venv/
+.env
+
+# Pytest
+.pytest_cache/
