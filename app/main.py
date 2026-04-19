@@ -8,13 +8,9 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Initialize the bloom filter (e.g., capable of containing 1,000,000 items with 7 hashes)
-# In a real environment, you might load this from a persistent state or pass configuration.
 try:
-    # Set size to 1M bits, 7 hash functions
     bloom = fastbloom.BloomFilter(1000000, 7)
 except AttributeError:
-    # Fallback if fastbloom isn't built properly yet
     bloom = None
     print("Warning: fastbloom module not found or failed to initialize.")
 
@@ -37,8 +33,7 @@ def add_key(key: str):
 def check_key(key: str):
     if bloom is None:
         raise HTTPException(status_code=500, detail="Bloom filter engine not initialized.")
-    
-    # Check the bloom filter
+
     exists = bloom.contains(key)
     return BloomResponse(key=key, exists=exists)
 

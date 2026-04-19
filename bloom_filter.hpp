@@ -12,8 +12,8 @@
 class ConcurrentBloomFilter {
 private:
     std::vector<bool> bits;
-    size_t m; // Number of bits
-    size_t k; // Number of hash functions
+    size_t m;
+    size_t k;
     mutable std::shared_mutex mutex;
 
     uint64_t compute_base_hash(const std::string& key) const {
@@ -21,7 +21,7 @@ private:
     }
 
 public:
-    ConcurrentBloomFilter(size_t size, size_t num_hashes) 
+    ConcurrentBloomFilter(size_t size, size_t num_hashes)
         : m(size), k(num_hashes) {
         bits.resize(m, false);
     }
